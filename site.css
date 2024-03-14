@@ -1,0 +1,86 @@
+pre code {
+	background: var(--background-default) !important;
+  font-size: 16px;
+  line-height: 23px;
+  border-radius: 8px;
+}
+
+.glide-container {
+	display: flex;
+	justify-content: center;
+}
+
+.glide-container a:after {
+	border-bottom: none !important;
+}
+
+i.glide-svg {
+  z-index: 1;
+  color: var(--accent-primary-default);
+	font-size: 30px !important;	
+	margin-top: 50px;
+	cursor: pointer;
+	animation: glide 2s infinite;
+	position: relative;
+	transition-duration: 0.4s;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@keyframes glide {
+	0% {
+    bottom: 0px;
+  }
+  
+	50% {
+    bottom: -15px;
+  }
+  
+	100% {
+    bottom: 0px;
+  }
+}
+
+i.glide-svg:hover {
+	transform: scale(1.1);
+	color: var(--accent-primary-stronger);
+}
+
+.profile-pic {
+  width: 38px;
+  height: 38px;
+  border: 1.5px var(--outline-dimmest) solid;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+section {
+  margin-top: 180px;
+}
+
+.copy-btn {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.outline {
+  display: inline-block;
+}
+
+.output * {
+  vertical-align: text-bottom;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.version {
+  font-size: 17px;
+  font-weight: 600;
+  width: fit-content;
+  background-color: var(--accent-primary-dimmest);
+  color: var(--accent-primary-strongest);
+  border: 1px solid var(--accent-primary-stronger);
+  padding: 8px 10px;
+  border-radius: 11px;
+}

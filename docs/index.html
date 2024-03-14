@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="replit.css">
+  <meta property="og:description" content="A Replit-themed CSS stylesheet that is fully responsive and simply stunning.">
+  <meta property="og:image" content="/replit.svg" />
+  <title>replit.css</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/theme.css" />
+  <link rel="icon" href="/replit.svg" />
+  <link href="/replit.css" rel="stylesheet" type="text/css" />
+  <link href="/site.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="/" class="nav-logo">
+      <svg width="25" height="25" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+        class="align-middle">
+        <defs></defs>
+        <path
+          d="M7 5.5C7 4.67157 7.67157 4 8.5 4H15.5C16.3284 4 17 4.67157 17 5.5V12H8.5C7.67157 12 7 11.3284 7 10.5V5.5Z"
+          fill="#F26207"></path>
+        <path d="M17 12H25.5C26.3284 12 27 12.6716 27 13.5V18.5C27 19.3284 26.3284 20 25.5 20H17V12Z" fill="#F26207">
+        </path>
+        <path
+          d="M7 21.5C7 20.6716 7.67157 20 8.5 20H17V26.5C17 27.3284 16.3284 28 15.5 28H8.5C7.67157 28 7 27.3284 7 26.5V21.5Z"
+          fill="#F26207"></path>
+      </svg>replit.css</a>
+    <ul class="nav-links">
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+      <div class="menu">
+        <li class="nav-dropdown">
+          <a href="/docs" class="dropdown-link">Docs</a>
+          <ul class="dropdown">
+            <li><a href="/docs/#getstarted">Get started</a></li>
+            <li><a href="/docs/#navbar">Navbar</a></li>
+            <li><a href="/docs/#headers">Headers</a></li>
+            <li><a href="/docs/#text">Text</a></li>
+            <li><a href="/docs/#lists">Lists</a></li>
+            <li><a href="/docs/#images">Images</a></li>
+            <li><a href="/docs/#buttons">Buttons</a></li>
+            <li><a href="/docs/#inputs">Inputs</a></li>
+            <li><a href="/docs/#tables">Tables</a></li>
+            <li><a href="/docs/#cards">Cards</a></li>
+            <li><a href="/docs/#spinners">Spinner</a></li>
+            <li><a href="/docs/#alerts">Alerts</a></li>
+            <li><a href="/docs/#badges">Badges</a></li>
+            <li><a href="/docs/#footer">Footer</a></li>
+          </ul>
+        </li>
+        <li><a href="https://replit.com/@sojs/SoIdeas?v=1">Demo</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a class="btn btn-primary" href="/__repl">Made with Replit</a></li>
+      </div>
+    </ul>
+  </nav>
+  <section class="container" id="getstarted">
+    <h2 class="text-glow">Getting started</h2>
+    <p>Create a new <code>index.html</code> file in your project root and copy the HTML code below you'll need to get
+      started.</p>
+    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;link href="https://replitcss.replit.app/replit.css" rel="stylesheet" type="text/css"/&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;section class="container"&gt;
+    &lt;/section&gt;
+    &lt;script src="https://replitcss.replit.app/replit.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <div class="alert alert-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-info-circle-fill alert-icon" viewBox="0 0 16 16">
+        <path
+          d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+      </svg>
+      </svg>The main body content will go in the <code>container</code> classes, while the navbar will go outside of the
+      container section and at the beginning.</div>
+  </section>
+  <section class="container" id="navbar" style="margin-top:180px">
+    <h2 class="text-glow">Navbar</h2>
+    <p>Our fully responsive navbar, including dropdowns, buttons and a menu on mobile for maximum interactivity.</p>
+    <pre><code class="language-html" tabindex="0">&lt;nav class="navbar"&gt;
+  &lt;a href="#" class="nav-logo"&gt;&lt;img class="align-middle" src="image.png"/&gt;Title&lt;/a&gt;
+  &lt;ul class="nav-links"&gt;
+    &lt;input type="checkbox" id="checkbox_toggle"/&gt;
+    &lt;label for="checkbox_toggle" class="hamburger"&gt;&#9776;&lt;/label&gt;
+    &lt;div class="menu"&gt;
+      &lt;li class="nav-dropdown"&gt;
+        &lt;a href="#" class="dropdown-link"&gt;Docs&lt;/a&gt;
+        &lt;ul class="dropdown"&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class="btn btn-primary" href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+    &lt;/div&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+    <iframe src="https://replitcss-navbar.hecker40.repl.co" height="300"></iframe>
+    <hr>
+    <span class="version">Added in v1.3.6</span>
+    <p>You can also add a <code>nav-alert</code> for further, exclusive content.</p>
+    <pre><code class="language-html">&lt;div class="nav-alert" id="nav-alert"&gt;Content&lt;span class="nav-alert-delete" id="nav-alert-delete"&gt;&lt;/span&gt;&lt;/div&gt;</code></pre>
+    <iframe src="https://replitcss-navbar.hecker40.repl.co/alerts/" height="300"></iframe>
+  </section>
+  <section class="container" id="headers" style="margin-top:180px">
+    <h2 class="text-glow">Headers</h2>
+    <p>Our toolkit includes basic styling and other utilities for headers.</p>
+    <pre><code class="language-html">&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <hr>
+    <p>You can additionally add the <code>text-glow</code> utility class to create a glowing box shadow similar to <a
+        href="https://replit.com">Replit</a>.</p>
+    <pre><code class="language-html">&lt;h4 class="text-glow"&gt;Text glow&lt;/h4&gt;</code></pre>
+    <h4 class="text-glow">Text glow</h4>
+  </section>
+  <section class="container" id="text" style="margin-top:180px">
+    <h2 class="text-glow">Text</h2>
+    <p>Paragraph, bold, italic, underlined, strikethrough, and link text.</p>
+    <pre><code class="language-html">&lt;b&gt;Bold text&lt;/b&gt;
+&lt;i&gt;Italic text&lt;/i&gt;
+&lt;s&gt;Strikethrough text&lt;/s&gt;
+&lt;u&gt;Underline text&lt;/u&gt;
+&lt;p&gt;Paragraph text&lt;/p&gt;</code></pre>
+    <p>Paragraph text</p>
+    <b>Bold text</b>
+    <i>Italic text</i>
+    <s>Strikethrough text</s>
+    <u>Underline text</u>
+    <a href="#">Link</a>
+    <hr>
+    <p>You can also use our special utility class <code>link-accent</code> to make individual links look better and more
+      interactive, as depicted in the homepage.</p>
+    <pre><code class="language-html">&lt;a class="link-accent" href="#"&gt;Link&lt;/a&gt;</code></pre>
+    <a class="link-accent" href="#">Link</a>
+  </section>
+  <section class="container" id="lists" style="margin-top:180px">
+    <h2 class="text-glow">Lists</h2>
+    <p>A basic unordered and ordered list.</p>
+    <pre><code class="language-html">&lt;ul class="list-container"&gt;
+  &lt;li&gt;List item&lt;/li&gt;
+  &lt;li&gt;List item&lt;/li&gt;
+  &lt;li&gt;List item&lt;/li&gt;
+  &lt;li&gt;List item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="list-container"&gt;
+  &lt;li&gt;List item&lt;/li&gt;
+  &lt;li&gt;List item&lt;/li&gt;
+  &lt;li&gt;List item&lt;/li&gt;
+  &lt;li&gt;List item&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+    <ul class="list-container">
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+    </ul>
+    <ol class="list-container">
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+    </ol>
+  </section>
+  <section class="container" id="images" style="margin-top:180px">
+    <h2 class="text-glow">Images</h2>
+    <pre><code class="language-html">&lt;img src="image.jpg"/&gt;</code></pre>
+    <img src="/image.jpg" />
+  </section>
+  <section class="container" id="buttons" style="margin-top:180px">
+    <h2 class="text-glow">Buttons</h2>
+    <p>This library includes several pre-defined buttons, each serving their own purpose. First up is perhaps the three
+      most commonly used buttons on Replit.</p>
+    <pre><code class="language-html">&lt;button class="btn btn-primary"&gt;Primary button&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;Secondary button&lt;/button&gt;
+&lt;button class="btn btn-outline-secondary"&gt;Secondary outline button&lt;/button&gt;</code></pre>
+    <div class="output">
+      <button class="btn btn-primary">Primary button</button>
+      <button class="btn btn-secondary">Secondary button</button>
+      <button class="btn btn-outline-secondary">Secondary outline button</button>
+    </div>
+    <hr>
+    <p>Colorful buttons to make your website look more vibrant.</p>
+    <pre><code class="language-html">&lt;button class="btn btn-red"&gt;Red button&lt;/button&gt;
+&lt;button class="btn btn-orange"&gt;Orange button&lt;/button&gt;
+&lt;button class="btn btn-yellow"&gt;Yellow button&lt;/button&gt;
+&lt;button class="btn btn-lime"&gt;Lime button&lt;/button&gt;
+&lt;button class="btn btn-green"&gt;Button button&lt;/button&gt;
+&lt;button class="btn btn-teal"&gt;Teal button&lt;/button&gt;
+&lt;button class="btn btn-blue"&gt;Blue button&lt;/button&gt;
+&lt;button class="btn btn-purple"&gt;Purple button&lt;/button&gt;
+&lt;button class="btn btn-magenta"&gt;Magenta button&lt;/button&gt;
+&lt;button class="btn btn-pink"&gt;Pink button&lt;/button&gt;
+&lt;button class="btn btn-grey"&gt;Gray button&lt;/button&gt;
+&lt;button class="btn btn-brown"&gt;Brown button&lt;/button&gt;</code></pre>
+    <div class="output">
+      <button class="btn btn-red">Red button</button>
+      <button class="btn btn-orange">Orange button</button>
+      <button class="btn btn-yellow">Yellow button</button>
+      <button class="btn btn-lime">Lime button</button>
+      <button class="btn btn-green">Button button</button>
+      <button class="btn btn-teal">Teal button</button>
+      <button class="btn btn-blue">Blue button</button>
+      <button class="btn btn-purple">Purple button</button>
+      <button class="btn btn-magenta">Magenta button</button>
+      <button class="btn btn-pink">Pink button</button>
+      <button class="btn btn-grey">Gray button</button>
+      <button class="btn btn-brown">Brown button</button>
+    </div>
+    <hr>
+    <p>Large and small buttons.</p>
+    <pre><code class="language-html">&lt;button class="btn btn-secondary btn-lg"&gt;Large button&lt;/button&gt;
+&lt;button class="btn btn-secondary btn-sm"&gt;Small button&lt;/button&gt;</code></pre>
+    <div class="output">
+      <button class="btn btn-secondary btn-lg">Large button</button>
+      <button class="btn btn-secondary btn-sm">Small button</button>
+    </div>
+    <hr>
+    <p>Disabled buttons with a slight bit of shaded opacity to emphasize the "disabled" effect.</p>
+    <pre><code class="language-html">&lt;button class="btn btn-primary" disabled&gt;Disabled button&lt;/button&gt;
+&lt;button class="btn btn-outline-secondary" disabled&gt;Disabled button&lt;/button&gt;</code></pre>
+    <div class="output">
+      <button class="btn btn-primary" disabled>Disabled button</button>
+      <button class="btn btn-outline-secondary" disabled>Disabled button</button>
+    </div>
+    <hr>
+    <span class="version">Added in v1.3.6</span>
+    <p>Replit's default Auth button, using <code>auth.js</code>.</p>
+    <pre><code class="language-html">&lt;script src="https://replitcss.replit.app/auth.js" authed="location.replace('/')"&gt;&lt;/script&gt;</code></pre>
+    <script src="https://replitcss.replit.app/auth.js" authed="location.replace('/docs')"></script>
+  </section>
+  <section class="container" style="margin-top:180px" id="inputs">
+    <h2 class="text-glow">Inputs</h2>
+    <p>A basic <code>input</code> and <code>textarea</code> element, found all over Replit.</p>
+    <pre><code class="language-html">&lt;input type="text" placeholder="Input"/&gt;
+&lt;textarea placeholder="Textarea"&gt;&lt;/textarea&gt;</code></pre>
+    <input type="text" placeholder="Input" />
+    <textarea placeholder="Textarea"></textarea>
+    <div class="alert alert-negative"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-exclamation-triangle-fill alert-icon" viewBox="0 0 16 16">
+        <path
+          d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+      </svg>Be sure to assign the <code>type</code> attribute to a value for a normal <code>input</code> tag to work.
+    </div>
+    <hr>
+    <p>You can also add the <code>disabled</code> state to make inputs seem untypable.</p>
+    <input type="text" placeholder="Disabled input" disabled />
+    <hr>
+    <span class="version">Added in v1.2.1</span>
+    <p>A simple dropdown with the <code>select</code> tag.</p>
+    <pre><code class="language-html">&lt;select&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+  &lt;option&gt;Option 3&lt;/option&gt;
+  &lt;option&gt;Option 4&lt;/option&gt;
+  &lt;/select&gt;</code></pre>
+    <select>
+      <option>Option 1</option>
+      <option>Option 2</option>
+      <option>Option 3</option>
+      <option>Option 4</option>
+    </select>
+    <hr>
+    <p>Select files with our very own file selector.</p>
+    <pre><code class="language-html">&lt;div class="file-container"&gt;
+  &lt;label class="btn btn-primary" for="upload"&gt;Upload file&lt;/label&gt;
+  &lt;input id="upload" type="file"&gt;
+&lt;/div&gt;</code></pre>
+    <div class="file-container">
+      <label class="btn btn-primary" for="upload">Upload file</label>
+      <input id="upload" type="file">
+    </div>
+    <hr>
+    <p>A toggle switch. You can add the <code>checked</code> state to make the toggle switch checked by default.</p>
+    <pre><code class="language-html">&lt;label class="switch"&gt;
+  &lt;input type="checkbox" checked&gt;
+  &lt;span class="slider round"&gt;&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+    <label class="switch">
+      <input type="checkbox" checked>
+      <span class="slider round"></span>
+    </label>
+    <hr>
+    <p>You can also apply the <code>checked</code> state to checkbox inputs to set the checked checkboxes.</p>
+    <pre><code class="language-html">&lt;label class="checkbox-container"&gt;Option 1
+  &lt;input type="checkbox" checked&gt;
+  &lt;span class="checkbox-mark"&gt;&lt;/span&gt;
+&lt;/label&gt; 
+&lt;label class="checkbox-container"&gt;Option 2
+  &lt;input type="checkbox"&gt;
+  &lt;span class="checkbox-mark"&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class="checkbox-container"&gt;Option 3
+  &lt;input type="checkbox"&gt;
+  &lt;span class="checkbox-mark"&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class="checkbox-container"&gt;Disabled option
+  &lt;input type="checkbox" disabled&gt;
+  &lt;span class="checkbox-mark"&gt;&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+    <label class="checkbox-container">Option 1
+      <input type="checkbox" checked>
+      <span class="checkbox-mark"></span>
+    </label>
+    <label class="checkbox-container">Option 2
+      <input type="checkbox">
+      <span class="checkbox-mark"></span>
+    </label>
+    <label class="checkbox-container">Option 3
+      <input type="checkbox">
+      <span class="checkbox-mark"></span>
+    </label>
+    <label class="checkbox-container">Disabled option
+      <input type="checkbox" disabled>
+      <span class="checkbox-mark"></span>
+    </label>
+    <hr>
+    <p>This radio input will have very similar features to the checkbox input, which means that you can also apply the
+      <code>checked</code> state to check elements by default.
+    </p>
+    <pre><code class="language-html">&lt;label class="radio-container"&gt;Option 1
+  &lt;input type="radio" name="radio" checked&gt;
+  &lt;span class="radio-mark"&gt;&lt;/span&gt;
+&lt;/label&gt; 
+&lt;label class="radio-container"&gt;Option 2
+  &lt;input type="radio" name="radio"&gt;
+  &lt;span class="radio-mark"&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class="radio-container"&gt;Option 3
+  &lt;input type="radio" name="radio"&gt;
+  &lt;span class="radio-mark"&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class="radio-container"&gt;Disabled option
+  &lt;input type="radio" name="radio" disabled&gt;
+  &lt;span class="radio-mark"&gt;&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+    <label class="radio-container">Option 1
+      <input type="radio" name="radio" checked>
+      <span class="radio-mark"></span>
+    </label>
+    <label class="radio-container">Option 2
+      <input type="radio" name="radio">
+      <span class="radio-mark"></span>
+    </label>
+    <label class="radio-container">Option 3
+      <input type="radio" name="radio">
+      <span class="radio-mark"></span>
+    </label>
+    <label class="radio-container">Disabled option
+      <input type="radio" name="radio" disabled>
+      <span class="radio-mark"></span>
+    </label>
+  </section>
+  <section class="container" id="tables" style="margin-top:180px">
+    <h2 class="text-glow">Tables</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Header</th>
+          <th>Header</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Item</td>
+          <td>Item</td>
+        </tr>
+        <tr>
+          <td>Item</td>
+          <td>Item</td>
+        </tr>
+        <tr>
+          <td>Item</td>
+          <td>Item</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="container" id="cards" style="margin-top:180px">
+    <h2 class="text-glow">Cards</h2>
+    <p>Cards, built fully with flexbox. The flexbox will fit two cards per row, but you can change that by adding
+      <code>flex: 0 1 &lt;percentage&gt;</code>, where the percentage is 1 divided by the number of cards you want per
+      row minus 2-3% for the gap space of each card. Note that any cards extra will be displayed as the full, body
+      width.
+    </p>
+    <pre><code class="language-html">&lt;div class="card-container"&gt;
+  &lt;div class="card"&gt;
+    &lt;img class="card-cover" src="https://replitcss.replit.app/image.jpg" /&gt;
+    &lt;h2 class="title"&gt;Card title&lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mi ipsum faucibus vitae aliquet. Odio eu feugiat pretium nibh ipsum. Aliquam eleifend mi in nulla posuere. A cras semper auctor neque vitae tempus quam.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="card"&gt;
+    &lt;img class="card-cover" src="https://replitcss.replit.app/image.jpg" /&gt;
+    &lt;h2 class="title"&gt;Card title&lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mi ipsum faucibus vitae aliquet. Odio eu feugiat pretium nibh ipsum. Aliquam eleifend mi in nulla posuere. A cras semper auctor neque vitae tempus quam.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="card"&gt;
+    &lt;img class="card-cover" src="https://replitcss.replit.app/image.jpg" /&gt;
+    &lt;h2 class="title"&gt;Card title&lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mi ipsum faucibus vitae aliquet. Odio eu feugiat pretium nibh ipsum. Aliquam eleifend mi in nulla posuere. A cras semper auctor neque vitae tempus quam.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    <div class="card-container">
+      <div class="card">
+        <img class="card-cover" src="https://replitcss.replit.app/image.jpg" />
+        <h2 class="title">Card title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mi ipsum faucibus vitae aliquet. Odio eu feugiat pretium nibh ipsum. Aliquam eleifend mi in nulla posuere. A cras semper auctor neque vitae tempus quam.</p>
+      </div>
+      <div class="card">
+        <img class="card-cover" src="https://replitcss.replit.app/image.jpg" />
+        <h2 class="title">Card title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mi ipsum faucibus vitae aliquet. Odio eu feugiat pretium nibh ipsum. Aliquam eleifend mi in nulla posuere. A cras semper auctor neque vitae tempus quam.</p>
+      </div>
+      <div class="card">
+        <img class="card-cover" src="https://replitcss.replit.app/image.jpg" />
+        <h2 class="title">Card title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mi ipsum faucibus vitae aliquet. Odio eu feugiat pretium nibh ipsum. Aliquam eleifend mi in nulla posuere. A cras semper auctor neque vitae tempus quam.</p>
+      </div>
+    </div>
+  </section>
+  <section class="container" id="spinners" style="margin-top:180px">
+    <h2 class="text-glow">Spinners</h2>
+    <p>A cool and sastifying spinner animation.</p>
+    <pre><code class="language-html">&lt;span class="spinner"&gt;&lt;/span&gt;</code></pre>
+    <span class="spinner"></span>
+  </section>
+  <section class="container" id="alerts" style="margin-top:180px">
+    <h2 class="text-glow">Alerts</h2>
+    <p>An alert that uses color to convey hints. Green for positive, primary for normal, and red for negative.</p>
+    <pre><code class="language-html">&lt;div class="alert alert-primary"&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill alert-icon" viewBox="0 0 16 16"&gt;
+    &lt;path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/&gt;
+  &lt;/svg&gt;Primary alert content.
+&lt;/div&gt;
+&lt;div class="alert alert-positive"&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill alert-icon" viewBox="0 0 16 16"&gt;
+    &lt;path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/&gt;
+  &lt;/svg&gt;
+Positive alert content.&lt;/div&gt;
+&lt;div class="alert alert-negative"&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle-fill alert-icon" viewBox="0 0 16 16"&gt;
+    &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/&gt;
+  &lt;/svg&gt;
+Negative alert content.&lt;/div&gt;</code></pre>
+    <div class="alert alert-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-info-circle-fill alert-icon" viewBox="0 0 16 16">
+        <path
+          d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+      </svg>
+      </svg>Primary alert content.</div>
+    <div class="alert alert-positive"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-check-circle-fill alert-icon" viewBox="0 0 16 16">
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+      </svg>Positive alert content.</div>
+    <div class="alert alert-negative"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-exclamation-triangle-fill alert-icon" viewBox="0 0 16 16">
+        <path
+          d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+      </svg>Negative alert content.</div>
+  </section>
+  <section class="container" id="badges" style="margin-top:180px">
+    <h2 class="text-glow">Badges</h2>
+    <p>Badges to signify roles, stats, and way more. Since this uses the <code>em</code> unit, you will have to put this
+      in a header or <code>p</code> tag in order for the size to be displayed relative to the parent.</p>
+    <pre><code class="language-html">&lt;p&gt;@username
+  &lt;span class="badge badge-yellow"&gt;Admin&lt;/span&gt;
+  &lt;span class="badge badge-teal"&gt;Community Moderator&lt;/span&gt;
+  &lt;span class="badge badge-green"&gt;Detective&lt;/span&gt;
+  &lt;span class="badge badge-blue"&gt;Verified&lt;/span&gt;
+  &lt;span class="badge badge-red"&gt;Replit Rep&lt;/span&gt;
+  &lt;span class="badge badge-purple"&gt;Patron&lt;/span&gt;
+  &lt;span class="badge badge-orange"&gt;Core&lt;/span&gt;
+&lt;/p&gt;</code></pre>
+    <p>@username
+      <span class="badge badge-yellow">Admin</span>
+      <span class="badge badge-teal">Community Moderator</span>
+      <span class="badge badge-green">Detective</span>
+      <span class="badge badge-blue">Verified</span>
+      <span class="badge badge-red">Replit Rep</span>
+      <span class="badge badge-purple">Patron</span>
+      <span class="badge badge-orange">Core</span>
+    </p>
+  </section>
+  <section class="container" id="footer" style="margin-top:180px">
+    <h2 class="text-glow">Footer</h2>
+    <p>A decent footer to finish your website. You may need to add <code>margin-top</code> to make it fixed to the
+      bottom of the page.</p>
+    <pre><code class="language-html">&lt;div class="footer"&gt;&copy; Company, Inc.&lt;/div&gt;</code></pre>
+    <iframe src="https://replitcss-footer.hecker40.repl.co" height="56.5"></iframe>
+  </section>
+  <div class="footer" style="margin-top:90px">&copy; 2023 <a href="https://replit.com/@hecker40"
+      target="_blank">@hecker40</a></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="/replit.js"></script>
+  <script src="/site.js"></script>
+  <script async src="https://arc.io/widget.min.js#jLL8ktfM"></script>
+</body>
+
+</html>
